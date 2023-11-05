@@ -1,23 +1,6 @@
 from random import randint, randrange
 import time
 import tracemalloc
-
-def generate_datasets():
-    small_random_dataset = [randint(0, 20000) for _ in range(200)]
-    medium_random_dataset = [randint(0, 20000) for _ in range(2000)]
-    big_random_dataset = [randint(0, 20000) for _ in range(20000)]
-
-    small_sorted_dataset = sorted(small_random_dataset)
-    medium_sorted_dataset = sorted(medium_random_dataset)
-    big_sorted_dataset = sorted(big_random_dataset)
-
-    small_reversed_dataset = small_sorted_dataset[::-1]
-    medium_reversed_dataset = medium_sorted_dataset[::-1]
-    big_reversed_dataset = big_sorted_dataset[::-1]
-
-    return small_random_dataset, medium_random_dataset, big_random_dataset, \
-           small_sorted_dataset, medium_sorted_dataset, big_sorted_dataset, \
-           small_reversed_dataset, medium_reversed_dataset, big_reversed_dataset
    
 def binary_loc_finder(arr, start, end, key):
     if start == end:
